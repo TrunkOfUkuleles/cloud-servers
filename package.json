@@ -19,7 +19,9 @@
   "homepage": "https://github.com/TrunkOfUkuleles/cloud-servers#readme",
   "dependencies": {
     "dotenv": "^9.0.2",
+    "express": "^4.17.1",
     "jest": "^26.6.3",
-    "socket.io": "^4.0.2"
+    "socket.io": "^4.0.2",
+    "socket.io-client": "^4.0.2"
   }
 }

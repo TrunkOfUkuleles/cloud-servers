@@ -6,15 +6,9 @@ const io = require('socket.io')(PORT);
 let deliverySystem = io.of('/caps') 
 const event = require('./modules/Event')
 require('dotenv').config();
+
 deliverySystem.on('connection', socket => {
 
-    socket.on('join', room => {
-        console.log('room name:', room);
-
-        socket.join(room);
-        deliverySystem.to('queue').emit('joined', room)
-        
-      })
 
     socket.on('pickup', payload => {
         // emit to whatever you want here

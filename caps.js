@@ -1,10 +1,11 @@
 'use strict';
 
-const io = require('socket.io')(3000);
-let deliverySystem = io.of('/caps')
-const { del } = require('httpie');
-const event = require('./modules/Event')
 
+const PORT = process.env.PORT || 3000;
+const io = require('socket.io')(PORT);
+let deliverySystem = io.of('/caps') 
+const event = require('./modules/Event')
+require('dotenv').config();
 deliverySystem.on('connection', socket => {
 
     socket.on('join', room => {
